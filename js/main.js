@@ -87,7 +87,7 @@
             }
         }
     });
-    
+
     /*------------------
 		Magnific
 	--------------------*/
@@ -111,4 +111,12 @@
         minDate: 0
     });
 
+    /*-------------------
+		Move page on click
+    --------------------- */
+    $(".go-to-form").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".consultation__form").offset().top - 100},
+        'slow');
+});
 })(jQuery);
