@@ -1,0 +1,79 @@
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <ul class="header__top__left">
+                        <li><i class="fa fa-phone"></i> {{ site.phone }}</li>
+                        <li><i class="fa fa-map-marker"></i> {{ site.address }}</li>
+                        <li><i class="fa fa-clock-o"></i> 7/24</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="header__top__right">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="/assets/img/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="header__menu__option">
+                    <nav class="header__menu">
+                        <ul>
+                            {% if page.layout == "home" %}
+                            <li class="active"><a href="/index.html">Anasayfa</a></li>
+                            {% else %}
+                            <li><a href="/index.html">Anasayfa</a></li>
+                            {% endif %}
+
+                            {% if page.layout == "about" %}
+                            <li class="active"><a href="#">Hakkımızda</a></li>
+                            {% else %}
+                            <li><a href="#">Hakkımızda</a></li>
+                            {% endif %}
+
+                            <li><a href="#">Ürünler</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Gıda</a></li>
+                                    <li><a href="#">Kozmetik</a></li>
+                                    <li><a href="#">...</a></li>
+                                </ul>
+                            </li>
+                            {% if page.layout == "blog" %}
+                            <li class="active"><a href="#">Blog</a></li>
+                            {% else %}
+                            <li><a href="/blog.html">Blog</a></li>
+                            {% endif %}
+
+                            {% if page.layout == "contact" %}
+                            <li class="active"><a href="/contact.html">İletİşİm</a></li>
+                            {% else %}
+                            <li><a href="/contact.html">İletİşİm</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    <div class="header__btn">
+                        <a href="#" class="primary-btn">Temsİlcİ Ol</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="canvas__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->

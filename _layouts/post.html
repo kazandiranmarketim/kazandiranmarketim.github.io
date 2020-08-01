@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+{%- include head.html -%}
+
+<body>
+
+    {%- include offcanvas-menu.html -%}
+    {%- include header.html -%}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option spad set-bg" data-setbg="/assets/img/breadcrumb-bg.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <div class="blog__hero__text">
+                            <h2> {{ page.title }} </h2>
+                            <ul>
+                                <li><img src="/assets/img/blog/out.png" alt=""> kazandirnmarketim</li>
+                                <li> {{ page.tarih }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                    <div class="blog__details__text">
+                        {{ content }}
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__related">
+                        <h3>Son Yazılar</h3>
+
+                        <div class="row">
+                            {%- include recent-posts.html -%}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+    {%- include footer.html -%}
+    {%- include js-plugins.html -%}
+</body>
+
+</html>
