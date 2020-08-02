@@ -1,14 +1,12 @@
-                    <div class="consultation__form come-here-form">
-                        <div class="section-title">
-                            <span>Hemen üye olun!</span>
-                            <h2>Ücretsiz Üyelik Formu</h2>
-                        </div>
-                        <form action="#">
-                            <input type="text" placeholder="İsim">
-                            <input type="text" placeholder="Soyisim">
-                            <input type="tel" placeholder="Telefon numarası">
-                            <input type="email" placeholder="E-posta">
-                            <textarea name="message" rows="3" placeholder="Mesajınız"></textarea>
+                        <form action="https://formsubmit.co/kazandiranmarkett@gmail.com" method="POST">
+                            <input type="text" name="isim" placeholder="İsim" required>
+                            <input type="text" name="soyisim" placeholder="Soyisim" required>
+                            <input type="tel" name="telefon" placeholder="Telefon numarası" required>
+                            <input type="email" name="eposta" placeholder="E-posta" required>
+                            <textarea name="mesaj" rows="3" placeholder="Mesajınız"></textarea>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="{{ site.url }}/thanks.html">
+                            <input type="hidden" name="_template" value="table">
                             <!-- <div class="datepicker__item"> -->
                             <!--     <input type="text" placeholder="Date" class="datepicker"> -->
                             <!--     <i class="fa fa-calendar"></i> -->
@@ -22,4 +20,3 @@
                             <!-- </select> -->
                             <button type="submit" class="site-btn">GÖnder</button>
                         </form>
-                    </div>

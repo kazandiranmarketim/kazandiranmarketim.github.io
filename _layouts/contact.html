@@ -29,39 +29,7 @@
     <section class="contact spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="contact__widget">
-                        <div class="contact__widget__icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="contact__widget__text">
-                            <h5>Adres</h5>
-                            <p> {{ site.address }} </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="contact__widget">
-                        <div class="contact__widget__icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="contact__widget__text">
-                            <h5>Telefon</h5>
-                            <p> {{ site.phone }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="contact__widget">
-                        <div class="contact__widget__icon">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="contact__widget__text">
-                            <h5>Eposta</h5>
-                            <p>{{ site.email }} </p>
-                        </div>
-                    </div>
-                </div>
+                {%- include contact-info-row.html -%}
             </div>
             <div class="contact__content">
                 <div class="row">
@@ -76,14 +44,7 @@
                             <p>
                                 Kazandıran Marketim networking sistemine üye olarak siz de ek gelir elde edin. Üye olmak
                                 için iletişim formunu doldurun, biz sizi arayalım.</p>
-                            <form action="#">
-                                <input type="text" placeholder="İsim">
-                                <input type="text" placeholder="Soyisim">
-                                <input type="tel" placeholder="Telefon numarası">
-                                <input type="email" placeholder="E-posta">
-                                <textarea name="message" rows="3" placeholder="Mesajınız"></textarea>
-                                <button type="submit" class="site-btn">GÖnder</button>
-                            </form>
+                            {%- include form.html -%}
                         </div>
                     </div>
                 </div>
